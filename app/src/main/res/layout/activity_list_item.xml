@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:id="@+id/tv_listNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avant"
+            android:text=""
+            android:textColor="@color/hitam"
+            android:textSize="25dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_below="@id/tv_listNama"
+            android:id="@+id/tv_listNominal"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="15dp"
+            android:fontFamily="@font/avant"
+            android:textColor="@color/hitam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_listTanggal"
+            android:fontFamily="@font/avant"
+            android:text=""
+            android:textColor="@color/hitam"
+            android:layout_centerInParent="true"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <View
+            android:layout_below="@id/tv_listNominal"
+            android:layout_width="800dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="3dp"
+            android:layout_gravity="center"
+            android:background="@color/hitam"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
