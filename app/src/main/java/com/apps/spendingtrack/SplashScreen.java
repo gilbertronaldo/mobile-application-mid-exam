@@ -1,14 +1,13 @@
 package com.apps.spendingtrack;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private int waktu_loading=3000;
+    private int waktu_loading = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +19,11 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
 
                 //setelah loading maka akan langsung berpindah ke main activity
-                Intent home=new Intent(SplashScreen.this, MainActivity.class);
+                Intent home = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(home);
                 finish();
 
             }
-        },waktu_loading);
+        }, waktu_loading);
     }
 }

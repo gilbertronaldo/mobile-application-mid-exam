@@ -1,14 +1,7 @@
 package com.apps.spendingtrack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.ContextThemeWrapper;
-
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,10 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PerbaruiActivity extends AppCompatActivity {
 
@@ -42,29 +34,29 @@ public class PerbaruiActivity extends AppCompatActivity {
         btn_perbarui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!txt_updateNama.getText().toString().isEmpty() && !txt_updateNominal.getText().toString().isEmpty()){
+                if (!txt_updateNama.getText().toString().isEmpty() && !txt_updateNominal.getText().toString().isEmpty()) {
                     int id;
                     Bundle bd = getIntent().getExtras();
-                    if(bd == null){
+                    if (bd == null) {
                         id = 1;
-                    }else{
+                    } else {
                         id = bd.getInt("id");
                     }
-                    String listId = Integer.toString(id+1);
+                    String listId = Integer.toString(id + 1);
                     String nama = txt_updateNama.getText().toString();
                     String nominal = txt_updateNominal.getText().toString();
                     boolean isUpdated = database.perbaruiData(listId, nama, nominal);
-                    if(isUpdated){
-                        Toast.makeText(PerbaruiActivity.this, "Data berhasil diperbarui",Toast.LENGTH_SHORT).show();
+                    if (isUpdated) {
+                        Toast.makeText(PerbaruiActivity.this, "Data berhasil diperbarui", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(PerbaruiActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
-                    } else{
-                        Toast.makeText(PerbaruiActivity.this, "Data gagal diperbarui",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(PerbaruiActivity.this, "Data gagal diperbarui", Toast.LENGTH_SHORT).show();
                     }
-                } else if (!txt_updateNama.getText().toString().isEmpty() && txt_updateNominal.getText().toString().isEmpty()){
+                } else if (!txt_updateNama.getText().toString().isEmpty() && txt_updateNominal.getText().toString().isEmpty()) {
                     txt_updateNominal.setError("Isi kolom ini");
-                } else if (txt_updateNama.getText().toString().isEmpty() && !txt_updateNominal.getText().toString().isEmpty()){
+                } else if (txt_updateNama.getText().toString().isEmpty() && !txt_updateNominal.getText().toString().isEmpty()) {
                     txt_updateNama.setError("Isi kolom ini");
                 } else {
                     txt_updateNama.setError("Isi kolom ini");
@@ -75,7 +67,7 @@ public class PerbaruiActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.back, menu);
         return super.onCreateOptionsMenu(menu);
     }

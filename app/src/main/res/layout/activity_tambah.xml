@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    tools:context=".TambahActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                tools:context=".TambahActivity">
 
     <TextView
-        android:id="@+id/tv_listNama"
-        android:text="Nama"
-        android:textSize="20dp"
-        android:textColor="@color/hitam"
-        android:fontFamily="@font/avant"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/tv_listNama"
+            android:text="Nama"
+            android:textSize="20dp"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/avant"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </TextView>
 
     <EditText
-        android:id="@+id/txt_nama"
-        android:layout_below="@id/tv_listNama"
-        android:hint="Masukkan nama item"
-        android:textColorLink="@color/hitam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:id="@+id/txt_nama"
+            android:layout_below="@id/tv_listNama"
+            android:hint="Masukkan nama item"
+            android:textColorLink="@color/hitam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     </EditText>
 
     <TextView
-        android:id="@+id/tv_nominal"
-        android:layout_below="@id/txt_nama"
-        android:text="Nominal"
-        android:textSize="20dp"
-        android:textColor="@color/hitam"
-        android:fontFamily="@font/avant"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/tv_nominal"
+            android:layout_below="@id/txt_nama"
+            android:text="Nominal"
+            android:textSize="20dp"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/avant"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </TextView>
 
     <EditText
-        android:id="@+id/txt_nominal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_nominal"
-        android:hint="Masukkan nominal item"
-        android:inputType="number"
-        android:textColorLink="@color/hitam"></EditText>
+            android:id="@+id/txt_nominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nominal"
+            android:hint="Masukkan nominal item"
+            android:inputType="number"
+            android:textColorLink="@color/hitam"></EditText>
 
     <Button
-        android:id="@+id/btn_submit"
-        android:text="Submit"
-        android:background="@color/biru_tua"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/avant"
-        android:textColor="@color/putih"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/txt_nominal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/btn_submit"
+            android:text="Submit"
+            android:background="@color/biru_tua"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/avant"
+            android:textColor="@color/putih"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/txt_nominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </Button>
 
 </RelativeLayout>

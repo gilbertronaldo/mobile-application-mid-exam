@@ -1,68 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    tools:context=".PerbaruiActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                tools:context=".PerbaruiActivity">
 
     <TextView
-        android:id="@+id/tv_updateNama"
-        android:text="Nama"
-        android:textSize="20dp"
-        android:textColor="@color/hitam"
-        android:fontFamily="@font/avant"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/tv_updateNama"
+            android:text="Nama"
+            android:textSize="20dp"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/avant"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </TextView>
 
     <EditText
-        android:id="@+id/txt_updateNama"
-        android:layout_below="@id/tv_updateNama"
-        android:hint="Masukkan nama item"
-        android:textColorLink="@color/hitam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:id="@+id/txt_updateNama"
+            android:layout_below="@id/tv_updateNama"
+            android:hint="Masukkan nama item"
+            android:textColorLink="@color/hitam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
     </EditText>
 
     <TextView
-        android:id="@+id/tv_updateNominal"
-        android:layout_below="@id/txt_updateNama"
-        android:text="Nominal"
-        android:textSize="20dp"
-        android:textColor="@color/hitam"
-        android:fontFamily="@font/avant"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/tv_updateNominal"
+            android:layout_below="@id/txt_updateNama"
+            android:text="Nominal"
+            android:textSize="20dp"
+            android:textColor="@color/hitam"
+            android:fontFamily="@font/avant"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </TextView>
 
     <EditText
-        android:id="@+id/txt_updateNominal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_updateNominal"
-        android:hint="Masukkan nominal item"
-        android:inputType="number"
-        android:textColorLink="@color/hitam"></EditText>
+            android:id="@+id/txt_updateNominal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_updateNominal"
+            android:hint="Masukkan nominal item"
+            android:inputType="number"
+            android:textColorLink="@color/hitam"></EditText>
 
     <Button
-        android:id="@+id/btn_perbarui"
-        android:text="Perbarui"
-        android:background="@color/biru_tua"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/avant"
-        android:textColor="@color/putih"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/txt_updateNominal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+            android:id="@+id/btn_perbarui"
+            android:text="Perbarui"
+            android:background="@color/biru_tua"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/avant"
+            android:textColor="@color/putih"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/txt_updateNominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
     </Button>
 
 </RelativeLayout>

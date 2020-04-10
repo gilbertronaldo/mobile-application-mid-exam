@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -57,7 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_1, id);
         contentValues.put(COL_2, nama);
         contentValues.put(COL_3, nominal);
-        db.update(TABLE_NAME, contentValues, "ID = "+id, null);
+        db.update(TABLE_NAME, contentValues, "ID = " + id, null);
         return true;
     }
 }

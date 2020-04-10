@@ -1,20 +1,16 @@
 package com.apps.spendingtrack;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -53,27 +49,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void lihatData() {
         Cursor data = database.ambilData();
-        if(data.getCount() == 0){
+        if (data.getCount() == 0) {
 
         }
-            while(data.moveToNext()){
-                String listId = data.getString(0);
-                String listNama = data.getString(1);
-                String listNominal = data.getString(2);
-                String listTanggal = data.getString(3);
-                arrayList.add(new ItemProperty(listId, listNama, ("Rp"+listNominal), listTanggal));
-            }
+        while (data.moveToNext()) {
+            String listId = data.getString(0);
+            String listNama = data.getString(1);
+            String listNominal = data.getString(2);
+            String listTanggal = data.getString(3);
+            arrayList.add(new ItemProperty(listId, listNama, ("Rp" + listNominal), listTanggal));
+        }
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.icon_tambah:
                 Intent intent = new Intent(this, TambahActivity.class);
                 startActivity(intent);

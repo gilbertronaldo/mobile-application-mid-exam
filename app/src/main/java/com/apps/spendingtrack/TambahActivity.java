@@ -1,16 +1,7 @@
 package com.apps.spendingtrack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.ContextThemeWrapper;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -43,28 +37,28 @@ public class TambahActivity extends AppCompatActivity {
         tambahData();
     }
 
-    public void tambahData(){
+    public void tambahData() {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!txt_nama.getText().toString().isEmpty() && !txt_nominal.getText().toString().isEmpty()){
+                if (!txt_nama.getText().toString().isEmpty() && !txt_nominal.getText().toString().isEmpty()) {
                     String nama = txt_nama.getText().toString();
                     String nominal = txt_nominal.getText().toString();
                     Date calendar = Calendar.getInstance().getTime();
                     SimpleDateFormat df = new SimpleDateFormat("yyyy-MMM-dd");
                     String tanggal = df.format(calendar);
                     boolean isInserted = database.tambahData(nama, nominal, tanggal);
-                    if(isInserted){
-                        Toast.makeText(TambahActivity.this, "Data berhasil ditambahkan",Toast.LENGTH_SHORT).show();
+                    if (isInserted) {
+                        Toast.makeText(TambahActivity.this, "Data berhasil ditambahkan", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(TambahActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
-                    } else{
-                        Toast.makeText(TambahActivity.this, "Data gagal ditambahkan",Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(TambahActivity.this, "Data gagal ditambahkan", Toast.LENGTH_SHORT).show();
                     }
-                } else if (!txt_nama.getText().toString().isEmpty() && txt_nominal.getText().toString().isEmpty()){
+                } else if (!txt_nama.getText().toString().isEmpty() && txt_nominal.getText().toString().isEmpty()) {
                     txt_nominal.setError("Isi kolom ini");
-                } else if (txt_nama.getText().toString().isEmpty() && !txt_nominal.getText().toString().isEmpty()){
+                } else if (txt_nama.getText().toString().isEmpty() && !txt_nominal.getText().toString().isEmpty()) {
                     txt_nama.setError("Isi kolom ini");
                 } else {
                     txt_nama.setError("Isi kolom ini");
@@ -75,14 +69,14 @@ public class TambahActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.back, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.icon_kembali:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
